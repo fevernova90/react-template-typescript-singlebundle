@@ -1,5 +1,6 @@
 const path = require('path')
 const DotenvPlugin = require('dotenv-webpack')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -9,4 +10,7 @@ module.exports = {
       path: path.resolve(__dirname, '..', './.env.production'),
     }),
   ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
 }
