@@ -1,5 +1,6 @@
-const webpack = require('webpack')
+const path = require('path')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const DotenvPlugin = require('dotenv-webpack')
 
 module.exports = {
   mode: 'development',
@@ -9,9 +10,9 @@ module.exports = {
   },
   devtool: 'cheap-module-source-map',
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.name': JSON.stringify('APPNAME - DEV'),
-    }),
     new ReactRefreshWebpackPlugin(),
+    new DotenvPlugin({
+      path: path.resolve(__dirname, '..', './.env.development'),
+    }),
   ],
 }
