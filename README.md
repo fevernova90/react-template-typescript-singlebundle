@@ -29,6 +29,8 @@ Have node and npm installed, then:
 npx degit https://github.com/fevernova90/react-template-typescript-singlebundle your-app-folder
 ```
 
+the repo is using Yarn, to use the native npm, delete yarn.lock and run npm install.
+
 ---
 
 ## Gotchas
