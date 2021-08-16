@@ -8,7 +8,7 @@
     "url": "https://github.com/fevernova90/react-template-typescript-singlebundle"
   },
   "scripts": {
-    "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
+    "start": "webpack serve --config webpack/webpack.config.js --stats=minimal --env env=dev",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "analyze": "webpack --config webpack/webpack.config.js --env env=prod analyze",
     "test": "echo \"Error: no test specified\" && exit 1",
